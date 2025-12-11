@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.3
+%define		kdeappsver	25.12.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kpkpass
 Summary:	kpkpass
 Name:		ka6-%{kaname}
-Version:	25.08.3
-Release:	2
+Version:	25.12.0
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	696bab31db9bacdfddf92554c33f7caa
+# Source0-md5:	fd1b30f35331b73410a7cd56a5e6e397
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel
@@ -84,7 +84,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_libdir}/libKPim6PkPass.so.*.*
 %ghost %{_libdir}/libKPim6PkPass.so.6
+%{_libdir}/qt6/qml/org/kde/pkpass
 %{_datadir}/qlogging-categories6/org_kde_kpkpass.categories
+%{_datadir}/mime/packages/application-vnd-apple-pkpasses.xml
 
 %files devel
 %defattr(644,root,root,755)
