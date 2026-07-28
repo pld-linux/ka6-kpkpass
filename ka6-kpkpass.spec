@@ -8,7 +8,7 @@
 Summary:	kpkpass
 Name:		ka6-%{kaname}
 Version:	26.04.3
-Release:	1
+Release:	2
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
@@ -86,7 +86,6 @@ rm -rf $RPM_BUILD_ROOT
 %ghost %{_libdir}/libKPim6PkPass.so.6
 %{_libdir}/qt6/qml/org/kde/pkpass
 %{_datadir}/qlogging-categories6/org_kde_kpkpass.categories
-%{_datadir}/mime/packages/application-vnd-apple-pkpasses.xml
 
 %files devel
 %defattr(644,root,root,755)
