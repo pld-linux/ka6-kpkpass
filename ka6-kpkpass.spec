@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	26.04.3
+%define		kdeappsver	26.08.0
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kpkpass
 Summary:	kpkpass
 Name:		ka6-%{kaname}
-Version:	26.04.3
-Release:	2
+Version:	26.08.0
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	6ac085a28a8dd96cedcce9ba26fd7a67
+# Source0-md5:	3b5ebe2e348f38f596726950043a9c88
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= %{qtver}
 BuildRequires:	Qt6Gui-devel
@@ -92,3 +92,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_includedir}/KPim6/KPkPass
 %{_libdir}/cmake/KPim6PkPass
 %{_libdir}/libKPim6PkPass.so
+%{_libdir}/qt6/metatypes/qt6kpim6pkpass_metatypes.json
